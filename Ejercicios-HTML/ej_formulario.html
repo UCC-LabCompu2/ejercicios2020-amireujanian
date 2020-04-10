@@ -17,27 +17,63 @@
 <!--Si tienes dudas de como hacer un formulario, puedes consultar:
     https://www.w3schools.com/html/tryit.asp?filename=tryhtml_elem_output-->
 
-<h3>Suscribase a Nuestro Portal de Noticias! Crear una cuenta es rápido!</h3>
-Nombre:
-Apellido:
-Sexo: Masculino Femenino
-Edad:
-Email:
-Usuario:
-Password:
-Confirmar Password:
+<h2>Suscribase a Nuestro Portal de Noticias! Crear una cuenta es rápido!</h2>
 
-Tipo de servicio: Free / Standard / Premium
-Tema:
-Política
-Negocios
-Tecnología
-Salud
+<form id="form1">
 
-Agregue un comentario:
+    <legend><h4><u><b>Completa el Formulario:</b></u></h4></legend>
+    <label for="nombre">Nombre: &nbsp</label>
+    <input type="text" size="30" id="nombre" required><br>
+    <label for="apellido">Apellido: &nbsp</label>
+    <input type="text" size="30" id="apellido" required><br>
 
-Boton de Enviar
+    Sexo: &nbsp&nbsp;
+    <label for="masculino">Masculino</label>
+    <input type="radio" id="masculino" name="genero" value="masculino" checked/>
+    <label for="femenino">Femenino</label>
+    <input type="radio" id="femenino" name="genero" value="femenino"/><br>
 
+    <!-- Como pedir un required al campo "SEXO", porque de la forma que se se lo deberia pedir a los 2 y la opcion es 1 -->
 
+    <label for="edad">Edad: &nbsp</label>
+    <input type="number" id="edad" name="edad" min="1" max="100" step="1" required/><br>
+
+    <!-- Email con Dominio Valido, control? -->
+
+    <label for="email">Email: &nbsp</label>
+    <input type="text" size="40" id="email"/><br>
+
+    <h5>Completa la informacion del usuario:</h5>
+
+    <label for="usuario">Usuario:&nbsp</label>
+    <input type="text" size="30" id="usuario" maxlenght="12" placeholder="Maximo 12 Caracteres" required><br>
+    <label for="contrasena">Password:&nbsp</label>
+    <input type="text" size="30" id="contrasena" minlenght="8" placeholder="Minimo 8 Caracteres" required><br>
+    <label for="ccontrasena">Confirmar Password:&nbsp</label>
+    <input type="text" size="30" id="ccontrasena" required><br>
+
+    <!-- Como controlar que las constrasenas sean iguales? -->
+
+    <h5>Tipo de Servicio:</h5>
+    <input type="checkbox" id="free" name="servicio1" value="free" checked/>
+    <label for="free">Free</label><br>
+    <input type="checkbox" id="standard" name="servicio2" value="standard"/>
+    <label for="standard">Standard</label><br>
+    <input type="checkbox" id="premium" name="servicio3" value="premium"/>
+    <label for="premium">Premium</label><br><br>
+
+    <label for="tema"><b>Tema:</b>&nbsp</label>
+    <select>
+        <option value="politica" id="tema">Politica</option>
+        <option value="negocios" id="tema">Negocios</option>
+        <option value="tecnologia" id="tema">Tecnologia</option>
+        <option value="salud" id="tema">Salud</option>
+    </select><br><br>
+    <textarea name="comentarios" rows="5" cols="60" placeholder="Escriba aqui sus comentarios."></textarea><br><br>
+
+    <input type="submit" value="ENVIAR"/>
+    <input type="reset" value="BORRAR"/>
+
+</form>
 </body>
 </html>
