@@ -56,3 +56,54 @@ function convertirGR(id) {
         document.getElementById("grados").value = grad;
         document.getElementById("radianes").value = rad;
 }
+
+/**
+ * Mostrar ocultar un DIV.
+ * @method mostrar_ocultar.
+ * @param {string} id - el Id de del div con su estilo.
+ * @return -
+ */
+
+function mostrar_ocultar(valorM){
+    if (valorM=="val_mostrar"){
+        document.getElementById("divM").style.display = 'block';
+    }else if (valorM=="val_ocultar"){
+        document.getElementById("divM").style.display = 'none';
+    }
+}
+
+function calcularSuma(){
+    var num1, num2;
+
+        num1=document.getElementsByName("sum_num1")[0].value;
+        num2=document.getElementsByName("sum_num2")[0].value;
+
+        document.getElementsByName("sum_total")[0].value = Number(num1) + Number(num2);
+}
+
+function calcularResta(){
+    var num1, num2;
+
+    num1=document.getElementsByName("res_num1")[0].value;
+    num2=document.getElementsByName("res_num2")[0].value;
+
+    document.getElementsByName("res_total")[0].value = Number(num1) - Number(num2);
+}
+
+function calcularMul(){
+    var num1, num2;
+
+    num1=document.getElementsByName("mul_num1")[0].value;
+    num2=document.getElementsByName("mul_num2")[0].value;
+
+    document.getElementsByName("mul_total")[0].value = Number(num1) * Number(num2);
+}
+
+function calcularDiv(){
+    var num1, num2;
+
+    num1=document.getElementsByName("div_num1")[0].value;
+    num2=document.getElementsByName("div_num2")[0].value;
+
+    document.getElementsByName("div_total")[0].value = Number(num1) / Number(num2);
+}
