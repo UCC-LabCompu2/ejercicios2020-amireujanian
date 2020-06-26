@@ -144,3 +144,19 @@ function cargarRes(){
 
     document.getElementById("dist").value = cant + " " + unidad;
 }
+
+function dibujarCC() {
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    var xMax = canvas.width;
+    var yMax = canvas.height;
+    var margen = 5;
+
+    ctx.fillStyle = "#b60303";
+    ctx.fillRect(margen, yMax - 40 - margen, 40, 40);
+
+    ctx.arc(xMax/2, yMax/2, 20, 0, 2*Math.PI);
+    ctx.stroke();
+    ctx.fillStyle = "#6d055d";
+    ctx.fill();
+}
