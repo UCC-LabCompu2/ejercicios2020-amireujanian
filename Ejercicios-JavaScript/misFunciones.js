@@ -123,3 +123,24 @@ function calcularDiv(){
 
     document.getElementsByName("div_total")[0].innerHTML = Number(num1) / Number(num2);
 }
+
+function cargarWeb(){
+    var cant, unidad, urlComp;
+
+    cant = document.getElementById("distancia").value;
+    unidad = document.getElementsByName("unidades")[0].value;
+
+    urlComp = "segundaWeb.html#" + cant + "#" + unidad;
+    window.open(urlComp);
+}
+
+function cargarRes(){
+    var urlComp, cant, unidad;
+
+    urlComp = window.location.href.split("/")[5];
+
+    cant = urlComp.split("#")[1];
+    unidad = urlComp.split ("#")[2];
+
+    document.getElementById("dist").value = cant + " " + unidad;
+}
