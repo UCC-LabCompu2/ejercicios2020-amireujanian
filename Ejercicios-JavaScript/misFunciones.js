@@ -160,3 +160,32 @@ function dibujarCC() {
     ctx.fillStyle = "#6d055d";
     ctx.fill();
 }
+
+
+var bandera;
+function dibujar(event) {
+
+    var canvas = document.getElementById("Canvitas");
+    var ctx = canvas.getContext ("2d");
+
+    var posX = event.clientX;
+    var posY = event.clientY;
+
+    canvas.onmousedown = function(){bandera = true};
+    canvas.onmouseup = function(){bandera = false};
+
+    if (bandera==true){
+
+    ctx.fillStyle = "#6d055d";
+    ctx.fillRect(posX,posY,3,3);
+    ctx.fill();
+
+    }
+}
+
+function limpiar(){
+    var canvas = document.getElementById("Canvitas");
+    var ctx = canvas.getContext ("2d");
+
+    canvas.width = canvas.width;
+}
